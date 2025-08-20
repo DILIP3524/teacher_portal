@@ -110,6 +110,7 @@ def add_student_view(request):
        
     return render(request , 'add_student.html' , {'form' : form})
 
+@login_req
 def edit_student_view(request , stu_id):
        
     student_to_update = get_object_or_404(Student , id = stu_id)
@@ -143,6 +144,7 @@ def edit_student_view(request , stu_id):
 
     return  render(request , 'add_student.html' , {'form' : form})
 
+@login_req
 def del_student_view(request , stu_id):
     
     student_to_delete = get_object_or_404(Student , id = stu_id)
