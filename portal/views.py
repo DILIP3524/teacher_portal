@@ -99,7 +99,7 @@ def add_student_view(request):
         
         except ValueError : 
             messages.error(request , "marks are exceeding 100")
-            return redirect('edit_student' ,stu_id = student.id)
+            return redirect('home')
 
         except ObjectDoesNotExist:
 
